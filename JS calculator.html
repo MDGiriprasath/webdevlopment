@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <form>
+        <input type="text" name="first" id="1st" placeholder="Enter the First num"><br><br>
+        <input type="text" name="second" id="2nd" placeholder="Enter the Second num"><br><br>
+        <input type="button" name="Addition" value="Addition" id="add">
+        <input type="button" name="subtraction" value="Subtraction" id="sub">
+        <input type="button" name="Multiplication" value="Multiplication" id="multi">
+        <input type="button" name="Division" value="Division" id="div">
+        <input type="button" name="Modulus" value="Modulus" id="modu">
+    </form>
+    <h1 id="output"></h1>
+    <script>
+        document.getElementById('add').addEventListener('click',function(){
+            let firstnum=document.getElementById('1st').value;
+            let secondnum=document.getElementById('2nd').value;
+
+            let sum=Number(firstnum) +Number(secondnum);
+
+            document.getElementById('output').innerHTML="The sum of "+ firstnum + " & " + secondnum +" is " +sum;
+
+        });
+        document.getElementById('sub').addEventListener('click',function(){
+            let firstnum=document.getElementById('1st').value;
+            let secondnum=document.getElementById('2nd').value;
+
+            let subt=Number(firstnum) - Number(secondnum);
+
+            document.getElementById('output').innerHTML="The subtraction of "+ firstnum + " & " + secondnum +" is " +subt;
+
+        });
+        document.getElementById('multi').addEventListener('click',function(){
+            let firstnum=document.getElementById('1st').value;
+            let secondnum=document.getElementById('2nd').value;
+
+            let mult=Number(firstnum) * Number(secondnum);
+
+            document.getElementById('output').innerHTML="The multiplication of "+ firstnum + " & " + secondnum +" is " +mult;
+
+        });
+        document.getElementById('div').addEventListener('click',function(){
+            let firstnum=document.getElementById('1st').value;
+            let secondnum=document.getElementById('2nd').value;
+
+            let div=Number(firstnum) / Number(secondnum);
+
+            document.getElementById('output').innerHTML="The division of "+ firstnum + " & " + secondnum +" is " +div;
+
+        });
+        document.getElementById('modu').addEventListener('click',function(){
+            let firstnum=document.getElementById('1st').value;
+            let secondnum=document.getElementById('2nd').value;
+
+            let mod=Number(firstnum) % Number(secondnum);
+
+            document.getElementById('output').innerHTML="The modulu of "+ firstnum + " & " + secondnum +" is " +mod;
+
+        });
+        
+    </script>
+</body>
+</html>

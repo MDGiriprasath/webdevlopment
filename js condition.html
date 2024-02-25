@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condition in js</title>
+</head>
+<body>
+    <script>
+        //if condition
+
+        //task1
+           var a=20;
+
+           if(a>15){
+               document.write( "<h1>"+"a is greater </h1>");
+           } 
+        //task2
+           var age=25;
+           if(age>=18)
+                document.write( "<h1>"+"your are elligible to Vote </h1>");
+        //task3
+
+            var year = prompt('In which year Tusunami was come in chennai');
+
+            if (year == 2015)
+                document.write("The Answer was correct");
+         
+        //task4
+        
+            var button=prompt('What is the button colour');
+            if(button=='green')
+                document.write("<h1>"+"TV is on </h1>");
+        
+        //task5 
+            var click=prompt('click subscribe button to subscribe');
+            if(click=='subscribe')
+                document.write("</h3>"+"The youtube channel is subscribed </h3>");      
+
+
+        //if else condition
+
+        //task1
+        const a=prompt("Enter the age")
+
+        if(a>17 && a<=22){
+            document.write( "<p>"+"If that person is eligible for Scholarship <p>");
+        }
+        else{
+            document.write( "<p>"+"If that person is not eligible for Scholarship <p>");
+        }
+        //task2
+
+        var age=prompt("Enter the age")
+        if(age>=18)
+            document.write( "<h1>"+"your are elligible to Vote </h1>");
+        else{
+            document.write( "<p>"+" your are not elligible to Vote <p>");
+        }
+
+        //task3
+        let year = prompt('In which year Tusunami was come in chennai');
+
+            if (year == 2015)
+                document.write("The Answer was correct");
+            else{
+                document.write("The Answer was wrong"); 
+            }    
+        
+        //task4
+        var button=prompt('What is the button colour');
+            if(button==green)
+                document.write("<h1>"+"TV is on </h1>");
+            else{
+                document.write("<h>"+"TV is off </h2>");
+            }  
+        //task5          
+        var mark=prompt('Enter your mark');
+            if(mark>=35)    
+            document.write("<h1>"+"You get pass</h1>");
+            else{
+                document.write("<h2>"+"You get fail</h2>");
+            }
+
+
+        //if else if condition
+
+        //task1
+        const a=prompt("Enter the age");
+
+        if(a>17 && a<=22){
+            document.write( "<p>"+"If that person is eligible for Scholarship <p>");
+        }
+        else if(a>22 && a<25){
+            document.write( "<p>"+"If that person is eligible for PG Scholarship <p>");
+        }
+        else{
+            document.write("<h2>"+"If that person is not eligible for Scholarship </h2>");
+        }
+
+        //task2
+        var mark=prompt("Enter your mark");
+        if(90<=mark){
+            document.write("<h1>"+"You get 'O' Grade</h1>");
+        }
+        else if(80<=mark){
+            document.write("<h2>"+"You get  'A' Grade</h2>");
+        }
+        else if(70<=mark){
+            document.write("<h3>"+"You get  'B' Grade</h3>");
+        }
+        else if(60<=mark){
+            document.write("<h3>"+"You get  'C' Grade</h3>");
+        }
+        else if(50<=mark){
+            document.write("<h3>"+"You get  'D' Grade</h3>");
+        }
+        else{
+            document.write("<h3>"+"You get Failed</h3>");
+        }
+
+        //task3
+        var age=prompt("Enter the age");
+        if(age>=18)
+            document.write( "<h1>"+"your are elligible to Vote </h1>");
+        else if(age>=17 && 18>=age){
+            document.write( "<p>"+" your are elligible to Voter ID aplly </p>");
+        }    
+        else{
+            document.write( "<p>"+" your are not elligible to Vote </p>");
+        } 
+
+        //task4
+        var book=prompt("Enter the Subject");
+        if(book==Tamil){
+            document.write("<b>"+"It is Tamil book</b>")
+        }
+        else if(book==English){
+            document.write("<b>"+"It is English book</b>")
+        }
+        else if(book==Maths){
+            document.write("<b>"+"It is Maths book</b>")
+        }
+        else if(book==Computer){
+            document.write("<b>"+"It is Computer book</b>")
+        }
+        else{
+            document.write("<b>"+"The book has Empty</b>")
+        }
+        //task5
+        var ram=prompt('Enter your salary');
+        var som=prompt('Enter your salary');
+        if(ram>som){
+            document.write("<h1>"+"ram salary is highest</h1>");
+        }
+        else if(som>ram){
+            document.write("<h1>"+"som salary is highest</h1>");
+        }
+        else{
+            document.write("<h1>"+"som and ram salary are equal</h1>"); 
+        }
+
+
+
+
+        //switchcase condition 
+
+        //task1
+        const fruits='mangoes';
+        switch (fruits){
+            case 'grapes':
+                document.write('grapes are rs:100');
+                break;
+            case 'apple':
+                document.write('apples are rs.140');
+                break;
+            case 'mangoes':
+                document.write('mangoes are rs.50');
+                break;
+            default:
+                document.write("out of Stock");
+                break;          
+        }
+
+        //task2
+        var bike=prompt('Enter bike model');
+        switch (bike){
+            case 'platina':
+                document.write('platina bike mileage is 80km/l');
+                break;
+            case 'Ct100':
+                document.write('ct100 bike mileage is 90km/l');
+                break;
+            case 'pulsur':
+                document.write('pulsur bike mileage is 55km/l');
+                break;
+            case 'ns200':
+                document.write('ns200 bike mileage is 45km/l');
+                break;
+            default:
+                document.write("Bajaj bike has gave more mileages");
+                break;          
+        }
+
+        //task3
+        var games=prompt('Enter the game');
+        switch (games){
+            case 'volleyball':
+                document.write('I play volleyball at morning 7.00pm');
+                break;
+            case 'Cricket':
+                document.write('I play cricket at afternoon 1.00pm');
+                break;
+            case 'kabbadi':
+                document.write('I play kabbadi at afternoon 3.00pm');
+                break;
+            case 'tennis':
+                document.write('I play tennis at eveing 5.00pm');
+                break;
+            default:
+                document.write("Not played that game");
+                break; 
+        }
+        
+        //task4
+
+        var snaks=prompt('Enter the climate');
+        switch (snaks){
+            case 'summer':
+                document.write('I eat salad');
+                break;
+            case 'winter':
+                document.write('I drink coffee');
+                break;
+            case 'rainy':
+                document.write('I eat puffs');
+                break;
+            default:
+                document.write("I ate any more");
+                break; 
+        }
+
+
+
+
+    </script>
+</body>
+</html>

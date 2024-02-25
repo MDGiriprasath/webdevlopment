@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task for Js</title>
+</head>
+
+<body>
+    <script>
+
+        /*1) Create a function sum() that will sum all arguments passed to it.
+        Quantity of the arguments is unknown.
+        
+        Use console.log() at the end of the sum() function to print result.
+        Use ES6 whenever possible."*/
+
+        function sum(numbers) {
+            let sum = 0;
+            for (let i = 0; i < numbers.length; i++) {
+                sum += numbers[i]
+
+            }
+            return sum;
+        }
+        console.log(sum([1, 2, 3, 4]));
+
+
+        // 2.)Change one line of code so, that error will go away.
+
+        const arr = [1, 2];
+
+        arr.push(3);
+
+        console.log(arr);
+
+        let arr1 = [1, 2, 3, 4];
+        console.log(arr1);
+
+
+        // 3) Change code to match output.
+
+        var i = 15;
+
+        for (var i = 0; i < 15; i++) {
+            if (i == 5) {
+                continue;
+            }
+            if (i == 6) {
+                continue;
+            }
+            if (i == 7) {
+                continue;
+            }
+            if (i == 8) {
+                continue;
+            }
+            if (i == 9) {
+                continue;
+            }
+            if (i == 10) {
+                continue;
+            }
+            console.log(i);
+        }
+
+        // 4) Change code to fix first error Uncaught ReferenceError: c is not defined.
+
+        var a = 5;
+        var b = 10;
+        var c = 2;
+
+        if (b > a) {
+
+            c = a + b + c;
+        }
+
+        //5) Change contents of the isNumber function
+        //using ternary operator.
+
+
+        function isNumber(a) {
+
+            typeof a === "number" ? console.log("That's number") : console.log("That's not a number");
+        }
+
+        isNumber(10);
+
+        isNumber("Hey there");
+
+        isNumber("true");
+
+
+        //6) Use arrow functions instead of functions
+
+        let mult = (a, b) => { return a * b };
+
+        setTimeout(() => { console.log(mult(5, 10)); }, 1000);
+
+
+        //7) Answer following question:
+
+
+        function multiplyBy(a, mult = 4) {
+            mult = mult !== undefined ? mult : 2;
+            console.log(a * mult);
+        }
+
+        multiplyBy(2);
+
+        multiplyBy(2, undefined);
+
+        multiplyBy(2, 0);
+
+        multiplyBy(5, 10);
+
+
+        //8) Throw Error when function square() is calledwithout arguments.
+
+        //Create new function and use it as default parameter.
+
+
+        function square(a = 5) {
+            console.log(a * a);
+        }
+
+        square();
+
+        square();
+
+
+        //9) Declare mult() function that will multiply values of the x, y, z fields of the passed object.
+        var obj = {
+            x: 5,
+            y: 20,
+            z: 3
+        };
+
+        function multi() {
+            console.log(obj.x * obj.y * obj.z);
+        }
+        multi()
+
+        //10) Assign values to the a, b, c variables using destructuring and rest operator.
+
+        var a, b, c;
+
+        var array = [1, 2, 3, 4, 5, 6, 7];
+
+        [a, b, ...c] = array;
+
+        console.log(a);
+        console.log(b);
+        console.log(c);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aadhar validation</title>
+</head>
+<body>
+    <label for="aadhar">Aadhar Number</label>
+    <input type="text" id="aadhar" name="aadhar" placeholder="Enter Aadhar Number">
+
+    <input type="button" id="button" value="Sumbit">
+
+    <h4 id="errormsg"></h4>
+
+    <script>
+        document.getElementById('button').addEventListener('click',function(){
+            const aadharinput=document.getElementById('aadhar').value;
+            const aadharRegex=/^\d{12}$/;
+            if(!aadharRegex.test(aadharinput)){
+                document.getElementById('errormsg').innerHTML='Invalid Aadhar Number';
+            }else{
+                document.getElementById('errormsg').innerHTML='valid Aadhar Number';   
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+h2{
+    color: skyblue;
+  }
+  h1{
+    color: darkblue;
+  }
+  li{
+    font-size: x-large;
+  }
+  dt{
+    font-size: xx-large;
+    color: darkslategray;
+    background-color: blanchedalmond;
+    font-style: italic;
+  }
+  dd{
+    font-size: x-large;
+    color: aqua;
+  }
+  p{
+    text-size-adjust: 50px;
+  }
+  img{
+    height: 150px;
+    width: 100px;
+  }

@@ -1,0 +1,20 @@
+
+ #head{
+    color:blueviolet ;
+ }
+
+ #open{
+   background-color: chartreuse;
+ }
+ #image{
+  height: 50px;
+  width: 50px;
+ }
+ #lorem{
+  color: chocolate;
+  background-color: cornsilk;
+ }
+ #definition{
+  font-size: xx-large;
+ }
+

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM manipulation in js</title>
+
+</head>
+<body id="csss">
+    <!-- <table>
+        <tr>
+            <th>S.NO</th>
+            <th>NMAE</th>
+            <th>PH.NO</th>
+        </tr>
+        <tr>
+            <td>1.</td>
+            <td>Giri</td>
+            <td>9994525139</td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>Vishnu</td>
+            <td>8300905697</td>
+        </tr>
+    </table> -->
+
+    <script>
+        let tab=document.createElement('table');
+        
+        let tabrow=document.createElement('tr');
+        let head1=document.createElement('th');
+        let head2=document.createElement('th');
+        let head3=document.createElement('th');
+        
+        let texhead1=document.createTextNode('S.NO');
+        let texhead2=document.createTextNode('NAME');
+        let texhead3=document.createTextNode('PH.NO');
+        
+        head1.appendChild(texhead1);
+        head2.appendChild(texhead2);
+        head3.appendChild(texhead3);
+
+        tabrow.appendChild(head1);
+        tabrow.appendChild(head2);
+        tabrow.appendChild(head3);
+        tab.appendChild(tabrow);
+        
+
+        let tabrow1=document.createElement('tr');
+        let data1=document.createElement('td');
+        let data2=document.createElement('td');
+        let data3=document.createElement('td');
+        
+        let texdata1=document.createTextNode('1');
+        let texdata2=document.createTextNode('Giri');
+        let texdata3=document.createTextNode('9994525139');
+        
+        data1.appendChild(texdata1);
+        data2.appendChild(texdata2);
+        data3.appendChild(texdata3);
+
+        tabrow1.appendChild(data1);
+        tabrow1.appendChild(data2);
+        tabrow1.appendChild(data3);
+        tab.appendChild(tabrow1);
+
+        let tabrow2=document.createElement('tr');
+        let data4=document.createElement('td');
+        let data5=document.createElement('td');
+        let data6=document.createElement('td');
+        
+        let texdata4=document.createTextNode('2');
+        let texdata5=document.createTextNode('Vishnu');
+        let texdata6=document.createTextNode('8300905697');
+        
+        data4.appendChild(texdata4);
+        data5.appendChild(texdata5);
+        data6.appendChild(texdata6);
+
+        tabrow2.appendChild(data4);
+        tabrow2.appendChild(data5);
+        tabrow2.appendChild(data6);
+        tab.appendChild(tabrow2);
+        console.log(tab);
+        document.querySelector('body').appendChild(tab);
+         
+        
+        
+
+
+        
+    </script>
+</body>
+</html>

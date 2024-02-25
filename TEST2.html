@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // var a1 =[10,20,30];
+        // var a2 =[10,20,30];
+        // console.log(a1[0] == a2[0]);
+
+        // s1 ='js';
+        // s2 ='js';
+        // console.log(s1==s2);
+
+
+        function checkNumber(num) {
+            if (num < 0) {
+                console.log("negative");
+                if (num % 2 == 0) {
+                    console.log("even");
+                } else {
+                    console.log("odd");
+                }
+            } else if (num > 0) {
+                console.log("postive");
+                if (num % 2 == 0) {
+                    console.log("even");
+                } else {
+                    console.log("odd");
+                }
+            } else {
+                console.log("Zero");
+            }
+        }
+
+        // test cases
+        checkNumber(-7);
+
+
+        //loop question
+        // function printNumbers() {
+
+        // for(let i=1;i>11;i++){
+
+        //     console.log(i);
+        // }
+        // }
+        function printNumbers() {
+            for (let i = 1; i <= 10; i++) {
+                if (i == 5) {
+                    continue;
+                }
+                console.log(i);
+            }
+        }
+
+
+        // calling the function
+        printNumbers();
+
+        //Array Question
+
+        function calculateSum(numbers) {
+            let sum = 0;
+            for (let i = 0; i < numbers.length; i++) {
+                sum += numbers[i]
+            }
+            return sum;
+        }
+
+        // test cases
+        console.log(calculateSum([1, 2, 3, 4, 5, 6]))
+
+        /*1) Create a function sum() that will sum all arguments passed to it.
+        Quantity of the arguments is unknown.
+        
+        Use console.log() at the end of the sum() function to print result.
+        Use ES6 whenever possible."*/
+
+        function sum(numbers) {
+            let sum = 0;
+            for (let i = 0; i < numbers.length; i++) {
+                sum += numbers[i]
+
+            }
+            return sum;
+        }
+        console.log(sum([1, 2, 3, 4]));
+
+        /*2) Answer following Questions:
+  2.1. Why no error is generated after the line 14?
+  2.2 Why after the line 19 TypeError is generated?
+
+Change one line of code so, that error will go away.*/
+
+        const arr = [1, 2];
+
+        arr.push(3);
+
+        console.log(arr);
+        // [1, 2, 3]
+
+        let arr1 = [1, 2, 3, 4];
+        // BEFORE: Uncaught TypeError:
+        //   Assignment to constant variable.
+        // AFTER: No error
+
+        console.log(arr1);
+
+        // 3) Change code to match output.
+
+        var i = 15;
+
+        for (var i = 0; i < 15; i++) {
+            // for(var j=5; j<11;j++){
+            //     continue;
+            // }}
+            if (i == 5) {
+                continue;
+            }
+            if (i == 6) {
+                continue;
+            } 
+            if (i == 7) {
+                continue;
+            }
+            if (i == 8) {
+                continue;
+            }
+            if (i == 9) {
+                continue;
+            }
+            if (i == 10) {
+                continue;
+            }
+            console.log(i);
+        }
+
+        // BEFORE: 5
+        // AFTER: 10"
+
+        // 4) Change code to fix first error Uncaught ReferenceError: c is not defined.
+
+        var a = 5;
+        var b = 10;
+        var c = 2;
+
+        if (b > a) {
+
+            c = a + b + c;
+
+
+
+            // BEFORE: Uncaught ReferenceError: c is not defined
+            // AFTER: 17
+        }
+
+        console.log(c);
+        // Uncaught ReferenceError: c is not defined"
+
+
+        //5) Change contents of the isNumber function
+        //using ternary operator.
+
+
+        function isNumber(a) {
+            //   if (typeof a === "number") {
+            //     return "That's number";
+            //   } else {
+            //     return "That's not a number";
+            //   }
+
+            typeof a === "number" ? console.log("That's number") : console.log("That's not a number");
+        }
+
+        isNumber(10);
+        // That's number
+
+        isNumber("Hey there");
+        // That's not a number
+
+        isNumber("true");
+// That's not a number"
+
+
+//6) Use arrow functions instead of functions
+//where possible.
+
+//Syntax: (parameters) => {statements }
+
+
+let mult = (a, b) => {return a * b};
+
+setTimeout(() => { console.log(mult(5, 10));}, 1000);
+// 50"
+// let mult= (a,b) => {return a*b};
+// setTimeout => console.log(mult(3,4),1000);
+
+
+/*7) Answer following question:
+	8.1. Why can't simply use following statement:
+mult = mult || 2;
+
+	Set default value of the mult parameter
+in the multiplyBy() function.
+*/
+
+function multiplyBy(a, mult=4) {
+  mult = mult !== undefined ? mult : 2;
+  console.log(a * mult);
+}
+
+multiplyBy(2);
+// 4
+
+multiplyBy(2, undefined);
+// 4
+
+multiplyBy(2, 0);
+// 0
+
+multiplyBy(5, 10);
+// 50"
+
+
+//8) Throw Error when function square() is calledwithout arguments.
+
+    //Create new function and use it as default parameter.
+
+
+function square(a=5) {
+  console.log(a * a);
+}
+
+square();
+// 100
+
+square();
+
+
+//9) Declare mult() function that will multiply values of the x, y, z fields of the passed object.
+
+
+
+var obj = {
+  x: 5,
+  y: 20,
+  z: 3
+};
+
+// Write mult() function here
+
+function multi(){
+    console.log(obj.x*obj.y*obj.z);
+}
+multi()
+// 300"
+
+
+//10) Assign values to the a, b, c variables using destructuring and rest operator.
+
+var a, b, c;
+
+var array = [1, 2, 3, 4, 5, 6, 7];
+
+// Destructuring assignment
+[a, b, ...c] = array;
+
+console.log(a); // Output: 1
+console.log(b); // Output: 2
+console.log(c);
+
+    </script>
+</body>
+
+</html>

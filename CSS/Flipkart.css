@@ -1,0 +1,43 @@
+header{
+    background-color: blue;
+    border-top: 20px;
+}
+ul{
+    list-style: none;
+ }
+#ank{
+    color: white;
+}
+a{
+    text-decoration: none;
+}
+a,li{
+    color: white;
+}
+input[value]{
+    color: blue;
+}
+#value{
+    padding: 10px;
+}
+#pholder{
+    padding-right: 100px;
+}
+img{
+    height: 30px;
+    width: 90px;
+}
+a[href$="Plus+"]{
+    color: yellow;
+}
+footer{
+    background-color: rgb(35, 35, 72);
+    display: grid;grid-template-columns: repeat(6,1fr);
+    border-bottom: 10px;
+}
+p{
+    color: white;
+}
+h5{
+    color: lightslategray;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Querry</title>
+    <style>
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        ul{
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+        }
+        header{
+            display: grid;
+            grid-template-columns: 30% 70%;
+            background-color: black;
+        }
+
+        @media  only screen and (min-width:600px) and (max-width:1024px){
+            ul{
+                grid-template-columns: repeat(1,1fr);
+            }
+            header{
+                grid-template-columns: 50% 50% ;
+                
+            }
+        }
+         
+           </style>
+</head>
+<body>
+    <header>
+        <section>
+            <img src="./achevers it logo.png" alt="AIT LOGO">
+        </section>
+        <section>
+            <ul>
+                <li><a href="#">All Courses</a></li>
+                <li><a href="#">Corperate Training</a></li>
+                <li><a href="#">Placement</a></li>
+                <li><a href="#">Internship</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#" >Blog</a></li>
+            </ul>
+
+        </section>
+
+    </header>
+</body>
+</html>

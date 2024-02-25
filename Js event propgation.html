@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event probagation</title>
+    <style>
+        #e1,#e2,#e3{
+            border: 1px solid red;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        Event propgation:
+            1. Event Bubbling
+            2. Event Capturing
+     -->
+
+     <!-- Event Bubbling: Event Bubbling is a mechanism in JS where an event that is triggered
+    on an element is also triggered on all of its parent element in the DOM Hierarchy. -->
+
+    <div id="parent">
+        <div id="child">
+            <button id="grandchild">Click me!</button>
+        </div>
+    </div><br><br>
+
+    
+
+    <script>
+        document.getElementById('parent').addEventListener('click',function(){
+            alert('parent element clicked')
+        });
+
+        document.getElementById('child').addEventListener('click',function(){
+            alert('child element clicked')
+        });
+
+        document.getElementById('grandchild').addEventListener('click',function(){
+            alert('grandchild element clicked')
+        });
+    </script>
+
+
+    <!-- Event Capturing: -->
+
+<div id="e1">1
+    <div id="e2">2
+        <div id="e3">
+            3
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('e1').addEventListener('click',function(){
+        alert('Hello');
+    });
+    document.getElementById('e2').addEventListener('click',function(){
+        alert('Who are you');
+    });
+    document.getElementById('e3').addEventListener('click',function(e){
+        e.stopPropagation();//For stopping the propogation from child to parent
+        alert('How are you');
+    });
+</script>
+</body>
+</html>

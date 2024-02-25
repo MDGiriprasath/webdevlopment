@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fetch data</h1>
+    <button id="btnclick">Fetch now</button>
+    <img id="image">
+
+    <script>
+        let btn= document.getElementById('btnclick');
+        let image=document.getElementById('image');
+        btn.addEventListener('click',function(){
+            //Make a request to the API Fetch the data
+            fetch('https://dog.ceo/api/breeds/image/random')
+            //Store the data in json method
+            .then(res=> res.json())
+            .then(result=>{
+                console.log(result);
+                image.src= result.message;
+            })
+            .catch(err=>console.log(err))
+        })
+    </script>
+</body>
+</html>

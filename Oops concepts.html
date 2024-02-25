@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oops concepts</title>
+</head>
+<body>
+    <script>
+
+        /*
+        Oops :Oops stands for "Object Oriented Programming System".Oops focuses
+             on creating objects that have data(properties) and behaviour(methods).
+             JS support Oops Concepts Such as Encapsulation,Inheritance and polymorphism.
+        
+        Encapsulation: Encapsulation refers to the concept of bundling the data and mathods
+                together into a single unit,such as class or object, and hiding the implementation
+                details from the outside world*/
+        class person{
+            constructor(name,age){
+                this.name=name;
+                this.age=age;
+            }
+
+            getName(){
+                return this.name;
+            }
+
+            getAge(){
+                return this.age;
+            }
+        }
+
+        const person1= new person('giri',22);
+
+        console.log(person1.getName());
+        console.log(person1.getAge());
+
+        //Class,Object And Constructor in Oops
+
+        //Create one class inside this class we have created three objects fill(),submit() and  cancel()
+
+        class Railwayform{
+            fill(givenname,trainno){
+                this.name=givenname;
+                this.trainno=trainno;
+
+            }
+            submit(){
+                alert(this.name + ": Your form is Submitted for Train no:" + this.trainno);
+            }
+
+            cancel(){
+                alert(this.name + ": Your form is Cancelled for Train no:" + this.trainno);
+            }
+        }
+
+        //Creating a form for Giri:
+        let giriform= new Railwayform();
+        // fill the form for somesh
+        giriform.fill('Giri',83822);
+
+        //Creating a form for vishnu:
+        let vishnuform1= new Railwayform();
+        let vishnuform2= new Railwayform();
+        // fill the form for vishnu:
+        vishnuform1.fill('vishnu',19119);
+        vishnuform2.fill('vishnu',19119);
+
+        giriform.submit();
+        vishnuform1.submit();
+        vishnuform2.cancel();
+
+
+        /*
+        Constructor: The consturctor method is called automatically by new, so we can intialize the objects there.
+        */
+
+        class Employee{
+            constructor(name){
+                this.time=name;
+                
+            }
+
+            login(){
+                console.log(this.time +"Employee logged in successdully at 10.00 AM");
+            }
+
+            logout(){
+                console.log(this.time +"Employee logged off successdully at 07.00 PM");
+            }
+        }
+
+        let time1= new Employee('giri');
+        time1.logout();
+
+        class newEmployee extends Employee{
+            login(){
+                console.log(this.time +"Employee go to lunch at 01.00 PM");
+            }
+             
+        }
+        var time2=new newEmployee('som ');
+        time2.login();
+    </script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function in js</title>
+</head>
+<body>
+    <!-- 
+        Function: Functions are block of code that can be define and called
+        at any point of time.
+
+        syntax:
+             
+            function myfunction(param1, param2){
+
+                //function logics
+            }
+
+            //function call:
+            instead of the parameter we will give the value for that parameter
+
+            myfunction(value1,value2);
+
+        various types
+        1. Function without parameters
+        2. Function with parameters
+        3. Function with return statements
+        4. Function with default parameter
+        5. Named Function/ Function With name
+        6. Anonymous Function/ Function without name
+        7. variable Function
+        8. callback Function
+        9. Nested function 
+        10.Recursive Function
+        11.IIFA(Immediately Invoked Function Anotation)/
+           IIFE(Immediately Invoked Function Expression)
+        12.ES6+:
+                -Arrow Function/Lamda Function
+     -->
+     <script>
+        function gstcal(){//Named Function/ Function With name
+
+            let price=500;
+            let gstper=20;
+
+            let total= price + (price*gstper/100);
+
+            console.log(total);
+        }
+
+        gstcal(); //manual function created for understanding
+                //function without parameter
+
+        function gstcalc(p,gp){//with parameter
+
+            let totalprice= p+ (p*gp/100);
+            console.log(totalprice);
+        }  
+        gstcalc(1000,18);
+        gstcalc(100,20);  //calling the function again and again. 
+        gstcalc(6000,12); 
+        
+        //Function with Return Statement:
+
+        function gst(p,gp) {
+
+            let totalprice=p+(p*gp/100);
+            return totalprice;
+            
+        }
+
+        let g1=gst(300,15);
+        let g2=gst(1200,20);
+        let g3=gst(50000,8);
+
+        console.log(g1,g2,g3);
+
+        //Function with default parameter
+
+        function gstp(p,gp=18){
+
+            let tp= p+(p*gp/100);
+            return tp;
+        }
+
+        let r1=gstp(1000);
+        let r2=gstp(3000);
+
+        console.log(r1,r2);
+
+        //Arrow function
+
+        //Anonymous Function: A Function without a name is called Anonymous Function.
+        
+        setTimeout(function(){
+            console.log("Hello All");
+        }, 5000);
+
+        (function(){
+            var x=10;
+            console.log(x);
+        })();
+
+        //Variable function: A function that is assigned to a variable.
+
+        const add=function(x,y){
+            return x+y;
+        };
+
+        console.log(add(2,3));
+
+        const great=function(){
+            console.log("Hello All of you");
+        }
+        setTimeout(great,3000);
+
+        //callback back:It is a function that is passed as an argument to another function and is executed inside that function.
+
+        function dosomething(callback){
+            console.log('doing something');
+            callback();
+        }
+        
+        function sayHello(){
+            console.log('hello');
+        }
+
+        dosomething(sayHello);
+
+        /*  Nested function: A function that is defined inside other function. These function are also called as inner function or closures,
+        When a function is defined inside another function,It has access to the variable.*/        
+        function outerfunction(){
+            let outervar='I am outside';
+
+            function innerfunction(){
+                console.log(outervar);
+            }
+            innerfunction();
+        }
+
+        outerfunction();
+
+        /*  Recursive Function: A function that calls itself to solve a problem or perform a computation or task.In JS ,
+        recursive functions can be used to solve problems that involves iteration.*/
+        function factorial(n){
+            if(n===0){
+                return 1;
+            }else{
+                return n* factorial(n-1);
+            }
+        }
+
+        console.log(factorial(6));
+        
+        //IIFE: It is a function that runs as soon as it is defined.Immediately Invoked Function Expression
+        /*
+        syntax:
+        (function (){
+            //function logics
+        
+        }) ();
+
+
+        */
+
+        (function(){
+            var x=10;
+            console.log(x);
+        })();
+
+        /* Arrow function: It is a Shorthand syntax for creating functions in js.It was introduced in ES^6.It provides more 
+        concise syntax compared to the traditional Function declaration.*/        
+        //Syntax: (parameters) => {statements }
+
+        //Traditional function declaration:
+
+        function addn(x,y){
+            return x+y;
+        }
+        console.log(addn(2,3));
+
+        //Arrow function
+
+        let addition= (x,y) => {return x+y};
+        console.log(addition(3,4));
+
+        //Traditional
+
+        function mul(a,b){
+            return a*b;
+        }
+        console.log(mul(2,3));
+
+        //Arrow:
+
+        let multiplication=(a,b)=>{return a*b}
+        console.log(multiplication(5,6 ));
+
+
+     </script>
+</body>
+</html>

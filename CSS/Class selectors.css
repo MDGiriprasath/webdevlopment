@@ -1,0 +1,21 @@
+.lorem{
+    color: aqua;
+    background-color: blueviolet;
+   }
+   .menu{
+    color: darkblue;
+  }
+  .select{
+    font-size: x-small;
+  }
+  .liselect{
+    font-style: italic;
+  }
+  .para{
+    color: cyan;
+    background-color: indigo;
+  }
+  .img{
+    height: 80px;
+    width: 60px;
+  }

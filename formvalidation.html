@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sing Up page</title>
+    <style>
+        #username,#email,#password,#mobileno{
+            width: 500px;
+            padding: 5px;
+            border-radius: 5px 5px 5px 5px;
+        }
+        p{
+            font-size: small;
+        }
+        #form{
+            text-align: center;
+        }
+        #submit{
+            padding: 5px;
+            border-radius: 5px;
+        }
+        
+        #user1,#email1,#num1,#pass1{
+            color: orange;
+            display: none;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <section id="form">
+        <h3>New User Signup</h3>
+        <input type="text" name="username" id="username" placeholder="username"><br>
+        <p id="user1">Username must be and contain 5-12 characters</p><br>
+        <input type="email" name="email" id="email" placeholder="email"><br>
+        <p id="email1">Email must be a valid address, e.g.me@mydomain.com</p><br>
+        <input type="password" name="password" id="password" placeholder="password"><br>
+        <p id="pass1">Password must alphanumeric (@,_and- are also allowed) and be 8-20 characters</p><br>
+        <input type="number" name="mobileno" id="mobileno" placeholder="telephone"><br>
+        <p id="num1">Telephone must be a valid Indian telephone number (10 digits)</p><br>
+        
+        <input type="submit" id="submit" value="Submit"><br><br>
+    </section>
+    <script>
+        document.getElementById('submit').addEventListener('click',function(){
+            var username=document.getElementById('username').value;
+        var userinput=/^[A-Za-z]{5,13}$/;
+        if(!userinput.test(username)){
+            document.getElementById('user1').style.display="block";
+        }else{
+            document.getElementById('user1').style.display="none";
+            document.getElementById('username').style.border="1px solid green";  
+        }
+
+        var email=document.getElementById('email').value;
+            var emailinput=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if(!emailinput.test(email)){
+                document.getElementById('email1').style.display="block";
+            }else{
+                document.getElementById('email1').style.display="none";
+                document.getElementById('email').style.border="1px solid green";
+            }
+
+            var password=document.getElementById('Password').value;
+            var passinput=/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()_+-=])[A-Za-z\d/!@#$%^&*()_+-=]{8,20}$/
+            if(!passinput.test(password)) {
+                document.getElementById('pass1').style.display="block";
+            }else{
+                document.getElementById('pass1').style.display="none";
+                document.getElementById('password').style.border="1px solid green";  
+            }
+        
+            const mobileno=document.getElementById('mobileno').value;
+            const mobileinput=/^[6-9]\d{9}$/;
+            if(!mobileinput.test(mobileno)){
+                document.getElementById('num1').style.display="block";
+            }else{
+                document.getElementById('num1').style.display="none";
+                document.getElementById('mobileno').style.border="1px solid green";
+            }
+
+        });
+        
+
+        
+    </script>
+
+</body>
+
+</html>

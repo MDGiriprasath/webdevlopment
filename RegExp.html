@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expressio</title>
+</head>
+<body>
+    
+    <script>
+        //Symtax of Regex Literals:99.99% use the regex literals only
+        // const regExpliteral=/ patterns /;  //with flags
+        // const regExpliteral=/ patterns /;  //with flags
+
+        //Syntax of Regax constructor
+        //new RegExp(pattern [, Flags]);
+
+        const RegExpstr='Hello world! hello all';
+        const regExpliteral= /hello/g;
+        console.log(RegExpstr.match(regExpliteral));
+
+
+        // Dynamic value:
+
+        var pattern=prompt('Enter the pattern');
+
+        var regexp= new RegExp(`${pattern}`,'gi');
+
+        var strng='giri prasath GIRI Giri Deepak prasath';
+
+        console.log(strng.match(regexp));
+
+        // Anchor and Boundries:
+
+            //1. ^:starts with
+            //2. $:Ends with
+
+            const regax1= /^apple/;
+
+            console.log(regax1.test('banana and apple'));
+    
+
+        
+    </script>
+</body>
+</html>

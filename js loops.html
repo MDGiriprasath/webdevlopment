@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="year" id="year">
+
+    </select>
+    <select name="month" id="month"></select>
+    <select name="day" id="day"></select>
+    <select name="monthnum" id="monthnum"></select>
+    <script>
+        var opt="<option>--year--</option>";
+        for(let i=1900;i<=2023;i++){
+            opt+= "<option value="+ i +">" + i +"</option>"
+        }
+        document.getElementById('year').innerHTML= opt;
+
+        //month using Arrays
+        var opt="<option>--MONTH--</option>";
+        var month=['January','February','March','April','May','June','July','August','September','October','November','December'];
+        for( i=0;i<month.length;i++){
+            opt+= "<option value="+ month[i] +">" + month[i] +"</option>"
+        }
+        document.getElementById('month').innerHTML= opt;
+
+        //Object Retrival
+
+        var bike={
+            company:'BMW',
+            model:'R 1250 GS Adventure',
+            mileage:'29.6km/l',
+            price:'2850000',
+            fuelcap:'30 litres'
+        }
+        document.write(bike.model);
+        //while loop
+        var k=1
+        var day="<option>--day--</option>";
+        while(k<=31){
+            day+= "<option value="+ k +">" + k +"</option>";
+            k++;
+        }
+        document.getElementById('day').innerHTML=day;
+
+        //do while
+
+        var j=1
+        var monthnum="<option>--monthnum--</option>";
+        do{
+            monthnum+= "<option value="+ j +">" + j +"</option>";
+            j++;
+        }
+        while(j<=12);
+        document.getElementById('monthnum').innerHTML=monthnum;
+        //methods of string
+        //string lenth
+        var str='Tell me about yourself'
+        console.log(str.length);
+        //lower and upper case string
+        var str='giriprasath'
+        console.log(str.toUpperCase(str));
+        console.log(str.toLowerCase(str));
+        console.log(str.toLocaleLowerCase);
+
+         
+    </script>
+</body>
+</html>  

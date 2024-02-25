@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        selectors:
+        1. getElementByTagName():
+        2. getElementByClassName():
+        3. getElementByID():
+        4. querry selector():
+        5. querry selector All():
+     -->
+    <form>
+        <input type="button" name="button" value="button" id="mybutton">
+        <input type="button" name="button1" value="button1" id="cclick">
+        <input type="button" name="button2" value="button2" id="mousedow">
+        <input type="button" name="button3" value="button3" id="mouseup">
+        <input type="button" name="button4" value="button4" id="mouseen">
+        <input type="button" name="button5" value="button5" id="mouselev">
+        <input type="button" name="button6" value="button6" id="mousemov">
+        <input type="button" name="button7" value="button7" id="contextmenu">
+    </form>
+        
+    <script>
+        //click
+        //dblclick
+        //mousedown
+        //mouseup
+        //mouseenter
+        //mouseleave
+        //mousemove
+        //contextmenu
+        const mybutton=document.querySelector('#mybutton');
+        mybutton.addEventListener('dblclick',()=>{
+            alert('mouse dbl clicked')
+        })
+        //click /getElementByClassname:
+
+        const cclick=document.getElementById('cclick');
+        cclick.addEventListener('click',()=>{
+            alert('mouse clicked')
+        })
+
+        //mousedown
+
+        const mousedow=document.querySelector('#mousedow');
+        mousedow.addEventListener('mousedown',()=>{
+            alert('mouse pressed down')
+        })
+
+        //mouseup
+
+        const mouseup=document.querySelector('#mouseup');
+        mouseup.addEventListener('mouseup',()=>{
+            alert('mouse released up')
+        })
+
+        //mouseenter
+
+        let mouseent=document.querySelector('#mouseen');
+        mouseent.addEventListener('mouseenter',()=>{
+            alert('mouse get entered')
+        })
+
+        //mouseleave
+
+        let mousele=document.querySelector('#mouselev');
+        mousele.addEventListener('mouseleave',()=>{
+            alert('mouse get leaved')
+        })
+
+        //mousemove
+        let mousemov=document.querySelector('#mousemov');
+        mousemov.addEventListener('mousemove',()=>{
+            alert('mouse get moved')
+        })
+
+        //contextmenu
+        let context=document.querySelector('#contextmenu');
+        context.addEventListener('contextmenu',()=>{
+            alert('mouse right clicked on the button')
+        });
+
+        //KEYBOARD EVENTS
+
+        //Keydown: Keydown event will be trigerred when a key is pressed down.
+        // document.addEventListener('keydown',(event)=>{
+        //     alert(`key pressed: ${event.key}`)
+        // });
+
+        //string Interpolation:
+
+        const name ='Giri';
+        const age=22;
+
+        const about=`My name is ${name} and I am ${age} year old`;
+        document.write(about);
+
+        //keyup: This event will get triggered when the key pressed is released.
+
+        // document.addEventListener('keyup', (event)=>{
+        //     alert(`key released: ${event.key}`)
+        // });
+
+        //Keydown with modified keys:
+
+        document.addEventListener('keydown', (event)=>{
+            if(event.key==='Enter'){
+                alert('Enter key is pressed');
+            }
+
+            if(event.ctrlkey  && event.key =="c"){
+                alert("ctrl + c is pressed");
+            }
+        })
+
+
+    </script>
+</body>
+</html>
